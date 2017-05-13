@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PageSpeed+</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="search_hint">Enter a web page URL</string>
+    
+    <string name ="analyzing">Analyzing..</string>
+
+    <!-- The label for use as a searchable item -->
+    <string name="search_label">Url History</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_strategy">Strategy</string>
+    <string name="menu_about">About</string>
+    
+    <string name="strategy">Strategy</string>
+    <string name="desktop">Desktop</string>
+    <string name="mobile">Mobile</string>
+    <string name="strategy_summary">The strategy to use when analyzing the page</string>
+
+    
+    <string name="title_about">About</string>
+    <string name="about_eula">End User License Agreement</string>
+    <string name="about_licenses">Open Source Licenses</string>
+    <string name="about_body"><![CDATA[
+        <b>PageSpeed+ 2013</b><br>
+        Version %s<br><br>
+        Copyright (C) 2014 Tarakeshwar Sriram<br> \<tarakesh.sriram@gmail.com\>
+    ]]></string>
+    
+    <string name="eula_text"><![CDATA[
+        By downloading, installing or using this application or any portion thereof
+        (\"Application\"), you agree to these terms and conditions.<br>
+        <br>
+        Your use of this Application is governed by: (a) the Google Terms of Service
+        (<a href="http://m.google.com/utos">m.google.com/utos</a>); (b) Google\'s Privacy Policy
+        (<a href="http://www.google.com/policies/privacy">http://www.google.com/policies/privacy</a>);
+        and (c) any applicable Google Service-specific terms of service or privacy policies.
+        Google\'s terms of service and privacy policies may be updated from time to time and without
+        notice.<br>
+        <br>
+        This Application collects certain information as you use it, including via Google Analytics.
+        Google\'s Privacy Policy explains how Google treats your information and protects your
+        privacy when you use the Application.  You agree to the use of your data in accordance
+        with Google\'s privacy policy.
+    ]]></string>
+    
+    <string name = "attribution"> Portions of this page are modifications based on work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</string>
+    
+    <string name="ok">OK</string>
+    
+    <string name="err_default">An error encountered while contacting the server. Please check if an internet connection exists and retry.</string>
+</resources>

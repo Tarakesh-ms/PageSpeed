@@ -1,0 +1,78 @@
+<!--
+You are free to copy and use this sample in accordance with the terms of the
+Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+  	<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1" />
+    <script type="text/javascript" src="jsapi.js"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['gauge']});
+    </script>
+    <script type="text/javascript">
+    var gauge;
+    var gaugeData;
+    var gaugeOptions;
+    google.setOnLoadCallback(drawGauge);
+    
+    function update(){ 
+        setScore($SCORE);
+     }
+      
+    function drawGauge() {
+    
+      gaugeData = google.visualization.arrayToDataTable([
+        ['Score'],
+        [0]
+      ]);
+    
+      gauge = new google.visualization.Gauge(document.getElementById('gauge'));
+      gaugeOptions = {
+          min: 0,
+          max: 100,
+          redFrom: 0,
+          redTo: 25,
+          yellowFrom:25,
+          yellowTo:60,
+          greenFrom: 60,
+          greenTo: 100,
+          minorTicks: 5,
+          width: 450, 
+          height: 150
+      };
+      gauge.draw(gaugeData, gaugeOptions);
+      setTimeout(update, 1000);
+    }
+    
+    function setScore(dir) {
+      gaugeData.setValue(0, 0, gaugeData.getValue(0, 0) + dir);
+      gauge.draw(gaugeData, gaugeOptions);
+    }
+
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([$RESOURCES]);
+
+        var options = {
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body style="font-family: Arial;border: 0 none;">
+    <h4>$SCORE/100 Score</h4> 
+    <div id="gauge"></div>
+    <h4>Page Analysis [$STRATEGY]:</h4>
+	<div id="piechart_3d"></div>
+	$SUGGESTIONS
+  </body>
+</html>
+​

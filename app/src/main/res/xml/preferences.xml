@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:dialogTitle="@string/strategy"
+        android:entries="@array/entries_list_strategy"
+        android:entryValues="@array/entries_list_strategy"
+        android:key="list_preference"
+        android:summary="@string/strategy_summary"
+        android:title="@string/strategy" />
+
+</PreferenceScreen>
